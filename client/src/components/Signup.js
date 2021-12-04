@@ -20,10 +20,10 @@ const Signup = () => {
     }, [history]);
 
     const [formData, setFormData] = useState({
-        username: 'johndoe',
-        email: 'jdoe@gmail.com',
-        password: 'abc123',
-        password2: 'abc123',
+        username: '',
+        email: '',
+        password: '',
+        password2: '',
         successMsg: false,
         errorMsg: false,
         loading: false,
@@ -179,7 +179,7 @@ const Signup = () => {
                 </button>
             </div>
             {/* already have account */}
-            <p className='text-center text-white'>
+            <p className='text-center text-black'>
                 Have an account? <Link to='/signin'>Log In</Link>
             </p>
         </form>

@@ -19,8 +19,8 @@ const Signin = () => {
     }, [history]);
 
     const [formData, setFormData] = useState({
-        email: 'jdoe@gmail.com',
-        password: 'abc123',
+        email: '',
+        password: '',
         errorMsg: false,
         loading: false,
     });
@@ -67,7 +67,7 @@ const Signin = () => {
                         history.push('/admin/dashboard');
                     } else {
                         console.log('Redirecting to user dashboard');
-                        history.push('/user/dashboard');
+                        history.push('/');
                     }
                 })
                 .catch((err) => {
@@ -125,7 +125,7 @@ const Signin = () => {
                 </button>
             </div>
             {/* already have account */}
-            <p className='text-center text-white'>
+            <p className='text-center text-black'>
                 Don't have an account? <Link to='/signup'>Register here</Link>
             </p>
         </form>

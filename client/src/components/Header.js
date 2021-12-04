@@ -16,7 +16,7 @@ const Header = ({ history }) => {
 	const showNavigation = () => (
 		<nav className='navbar navbar-expand-lg navbar-light bg-light'>
 			<Link to='/' className='navbar-brand'>
-				Logo
+			HELLO Stickers
 			</Link>
 			<button
 				className='navbar-toggler'
@@ -34,6 +34,28 @@ const Header = ({ history }) => {
 				<ul className='navbar-nav ml-auto mt-2 mt-lg-0'>
 					{!isAuthenticated() && (
 						<Fragment>
+							
+							<li className='nav-item'>
+								<Link to='/signup' className='nav-link'>
+									<i className='fas fa-edit'></i> Signup
+								</Link>
+							</li>
+							<li className='nav-item'>
+								<Link to='/signin' className='nav-link'>
+									<i className='fas fa-sign-in-alt'></i>{' '}
+									Signin
+								</Link>
+							</li>
+						</Fragment>
+					)}
+
+					{isAuthenticated() && isAuthenticated().role === 0 && (
+						<Fragment>
+							{/* <li className='nav-item'>
+								<Link to='/user/dashboard' className='nav-link'>
+									<i className='fas fa-home'></i> Dashboard
+								</Link>
+							</li> */}
 							<li className='nav-item'>
 								<Link to='/' className='nav-link'>
 									<i className='fas fa-home'></i> Home
@@ -62,27 +84,7 @@ const Header = ({ history }) => {
 									</span>
 								</Link>
 							</li>
-							<li className='nav-item'>
-								<Link to='/signup' className='nav-link'>
-									<i className='fas fa-edit'></i> Signup
-								</Link>
-							</li>
-							<li className='nav-item'>
-								<Link to='/signin' className='nav-link'>
-									<i className='fas fa-sign-in-alt'></i>{' '}
-									Signin
-								</Link>
-							</li>
-						</Fragment>
-					)}
-
-					{isAuthenticated() && isAuthenticated().role === 0 && (
-						<Fragment>
-							<li className='nav-item'>
-								<Link to='/user/dashboard' className='nav-link'>
-									<i className='fas fa-home'></i> Dashboard
-								</Link>
-							</li>
+							
 						</Fragment>
 					)}
 

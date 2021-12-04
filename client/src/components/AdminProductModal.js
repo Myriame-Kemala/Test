@@ -107,7 +107,7 @@ const AdminProductModal = () => {
 				<div className='modal-content'>
 					<form onSubmit={handleProductSubmit}>
 						<div className='modal-header bg-warning text-white'>
-							<h5 className='modal-title'>Add Food</h5>
+							<h5 className='modal-title'>Add Product</h5>
 							<button className='close' data-dismiss='modal'>
 								<span>
 									<i className='fas fa-times'></i>
